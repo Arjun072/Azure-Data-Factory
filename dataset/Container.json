@@ -5,6 +5,11 @@
 			"referenceName": "SourceConnection",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Folder_Name": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
