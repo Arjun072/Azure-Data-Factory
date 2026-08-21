@@ -5,13 +5,18 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().parameters.Source_name",
+						"value": "@activity('Get Metadata1').output.childItems",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -34,11 +39,10 @@
 									"storeSettings": {
 										"type": "AzureBlobFSReadSettings",
 										"recursive": true,
-										"wildcardFolderPath": {
-											"value": "@pipeline().parameters.Source_name",
+										"wildcardFileName": {
+											"value": "@item().name",
 											"type": "Expression"
 										},
-										"wildcardFileName": "*csv",
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
@@ -70,13 +74,7 @@
 							"inputs": [
 								{
 									"referenceName": "Container",
-									"type": "DatasetReference",
-									"parameters": {
-										"Folder_Name": {
-											"value": "@pipeline().parameters.Source_name",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
@@ -128,16 +126,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"Source_name": {
-				"type": "array",
-				"defaultValue": "source"
-			},
-			"Destination_name": {
-				"type": "array",
-				"defaultValue": "destination"
-			}
-		},
 		"annotations": []
 	}
 }
