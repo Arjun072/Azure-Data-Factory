@@ -1,0 +1,31 @@
+{
+	"name": "ContainerConnection",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ContainerConnection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "source"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "reviewText",
+				"type": "String"
+			},
+			{
+				"name": "Positive",
+				"type": "String"
+			}
+		]
+	}
+}

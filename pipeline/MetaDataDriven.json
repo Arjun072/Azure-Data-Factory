@@ -61,28 +61,8 @@
 										"fileExtension": ".csv"
 									}
 								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
-							},
-							"inputs": [
-								{
-									"referenceName": "Container",
-									"type": "DatasetReference"
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "Container",
-									"type": "DatasetReference"
-								}
-							]
+								"enableStaging": false
+							}
 						}
 					]
 				}
@@ -101,11 +81,8 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "Container",
-						"type": "DatasetReference",
-						"parameters": {
-							"Folder_Name": "source"
-						}
+						"referenceName": "ContainerConnection",
+						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"childItems"
