@@ -18,8 +18,7 @@
 				"folderPath": {
 					"value": "@dataset().Folder_Name",
 					"type": "Expression"
-				},
-				"fileSystem": "destination"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
