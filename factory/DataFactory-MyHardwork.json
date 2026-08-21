@@ -1,0 +1,15 @@
+{
+	"name": "DataFactory-MyHardwork",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3269c579-7677-41c8-8522-5ae77c4924b3",
+		"tenantId": "c9042d58-c719-453a-966b-edd826ad3635"
+	}
+}
