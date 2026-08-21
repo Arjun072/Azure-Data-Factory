@@ -46,6 +46,11 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.Source_name",
+						"type": "Expression"
+					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "Source to destination",
@@ -96,13 +101,25 @@
 							"inputs": [
 								{
 									"referenceName": "Container",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"Folder_Name": {
+											"value": "@pipeline().parameters.Source_name",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "Container",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"Folder_Name": {
+											"value": "@pipeline().parameters.Destination_name",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
@@ -110,9 +127,14 @@
 				}
 			}
 		],
-		"variables": {
-			"test": {
-				"type": "String"
+		"parameters": {
+			"Source_name": {
+				"type": "array",
+				"defaultValue": "source"
+			},
+			"Destination_name": {
+				"type": "array",
+				"defaultValue": "destination"
 			}
 		},
 		"annotations": []
