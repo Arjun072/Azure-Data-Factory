@@ -1,0 +1,13 @@
+{
+	"name": "SourceConnection",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "Connection to source Container",
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://sourcedata1.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDY3MzI5NDlFLTM5QUMtNDJDQS04RUEzLUM1NTFFNDEzQ0VEMV9jNjBhZGVhZS0xZmQ2LTQ5YTUtYmE4NC0wOGJhZGNhMWViNWQiDQp9"
+		}
+	}
+}
