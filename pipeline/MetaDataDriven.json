@@ -80,13 +80,7 @@
 							"outputs": [
 								{
 									"referenceName": "Container",
-									"type": "DatasetReference",
-									"parameters": {
-										"Folder_Name": {
-											"value": "@pipeline().parameters.Destination_name",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							]
 						}
