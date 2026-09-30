@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "amazon.csv",
+				"fileName": "amazon_reviews_us_Software_v1_00.tsv",
 				"fileSystem": "source"
 			},
 			"columnDelimiter": ",",
