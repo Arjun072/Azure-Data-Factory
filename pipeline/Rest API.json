@@ -109,6 +109,16 @@
 				]
 			}
 		],
+		"parameters": {
+			"LoadDate": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"v_LoadDate": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
