@@ -18,8 +18,14 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "carts.json",
-				"folderPath": "dummyjson/carts",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().FolderPath",
+					"type": "Expression"
+				},
 				"fileSystem": "bronze"
 			}
 		},
