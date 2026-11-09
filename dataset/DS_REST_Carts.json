@@ -6,12 +6,19 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"carts": {
-				"type": "string"
+			"RelativeURL": {
+				"type": "string",
+				"defaultValue": "carts"
 			}
 		},
 		"annotations": [],
 		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "@dataset().RelativeURL",
+				"type": "Expression"
+			}
+		},
 		"schema": []
 	}
 }
