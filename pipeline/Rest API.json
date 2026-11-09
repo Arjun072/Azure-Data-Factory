@@ -47,7 +47,11 @@
 				"outputs": [
 					{
 						"referenceName": "DS_ADLS_Bronze_Json",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"FolderPath": "dummyjson/carts",
+							"FileName": "carts.json"
+						}
 					}
 				]
 			},
