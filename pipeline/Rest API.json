@@ -56,7 +56,7 @@
 				]
 			},
 			{
-				"name": "Copy_Products_To_Bronze_copy",
+				"name": "Copy_Products_To_Bronze",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
