@@ -40,7 +40,7 @@
 						"referenceName": "DS_REST_Carts",
 						"type": "DatasetReference",
 						"parameters": {
-							"RelativeURL": "carts"
+							"RelativeURL": "carts?limit=30&skip={offset}"
 						}
 					}
 				],
