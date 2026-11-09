@@ -1,0 +1,12 @@
+{
+	"name": "DS_REST_Carts",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_RESET_DummyJson",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
