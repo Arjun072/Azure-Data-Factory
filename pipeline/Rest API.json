@@ -49,7 +49,10 @@
 						"referenceName": "DS_ADLS_Bronze_Json",
 						"type": "DatasetReference",
 						"parameters": {
-							"FolderPath": "dummyjson/carts",
+							"FolderPath": {
+								"value": "@if(empty(pipeline().parameters.LoadDate), formatDateTime(utcNow(),'yyyy-MM-dd'), pipeline().parameters.LoadDate)",
+								"type": "Expression"
+							},
 							"FileName": "carts.json"
 						}
 					}
@@ -102,7 +105,10 @@
 						"referenceName": "DS_ADLS_Bronze_Json",
 						"type": "DatasetReference",
 						"parameters": {
-							"FolderPath": "dummyjson/products",
+							"FolderPath": {
+								"value": "@if(empty(pipeline().parameters.LoadDate), formatDateTime(utcNow(),'yyyy-MM-dd'), pipeline().parameters.LoadDate)",
+								"type": "Expression"
+							},
 							"FileName": "products.json"
 						}
 					}
