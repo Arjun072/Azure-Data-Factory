@@ -50,7 +50,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"FolderPath": {
-								"value": "@concat('dummyjson/carts/load_date', variables('v_LoadDate'))",
+								"value": "@concat('dummyjson/carts/', variables('v_LoadDate'))",
 								"type": "Expression"
 							},
 							"FileName": "carts.json"
@@ -106,7 +106,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"FolderPath": {
-								"value": "@concat('dummyjson/products/load_date', variables('v_LoadDate'))",
+								"value": "@concat('dummyjson/products/', variables('v_LoadDate'))",
 								"type": "Expression"
 							},
 							"FileName": "products.json"
