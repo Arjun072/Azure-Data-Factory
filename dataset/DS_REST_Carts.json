@@ -5,6 +5,11 @@
 			"referenceName": "LS_RESET_DummyJson",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"carts": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "RestResource",
 		"schema": []
